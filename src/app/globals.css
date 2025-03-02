@@ -110,7 +110,7 @@ body {
 /* Navigation links */
 .nav-link {
   position: relative;
-  color: var(--color-text);
+  color: var(--color-gray-50);
   transition: color 0.3s;
   padding-bottom: 2px;
 }
@@ -127,7 +127,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-red);
+  background-color: var(--color-red-400);
   transition: width 0.3s;
 }
 
