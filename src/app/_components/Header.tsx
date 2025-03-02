@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-[#D32F2F]/20">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/40 border-b border-red-400/20">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 className="text-4xl font-edo text-custom-red neon-text-red">
           <span className="flicker-slow">T</span>hrill<span className="flicker-fast">D</span>eck
@@ -32,7 +32,7 @@ const Header = () => {
               Community
             </a>
           </nav>
-          <button className="px-4 py-2 bg-[#D32F2F] text-white rounded hover:bg-[#B71C1C] transition-all neon-glow-red">
+          <button className="px-4 py-2 bg-red-400 text-white rounded hover:bg-red-500 transition-all neon-glow-red">
             Login
           </button>
         </div>
@@ -59,7 +59,7 @@ const Header = () => {
           <a href="#" className="nav-link">
             Community
           </a>
-          <button className="px-4 py-2 bg-[#D32F2F] text-white rounded hover:bg-[#B71C1C] transition-all neon-glow-red">
+          <button className="px-4 py-2 bg-red-400 text-white rounded hover:bg-red-500 transition-all neon-glow-red">
             Login
           </button>
         </nav>
