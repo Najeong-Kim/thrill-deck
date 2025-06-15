@@ -1,5 +1,6 @@
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
+import { Movies } from "./_components/movie";
 
 export default function Home() {
   return (
@@ -7,6 +8,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <div className="mx-auto px-4 pt-4 pb-16">
+          <Movies />
+        </div>
       </main>
     </div>
   );
