@@ -2,10 +2,10 @@
 
 import { useApi } from "@/hooks/useApi";
 import Movie from "./Movie";
-import { Movie as MovieType } from "./type";
+import { MoviesResponse } from "./type";
 
 const Movies = () => {
-  const { data, loading } = useApi<{ movies: MovieType[] }>("/movies");
+  const { data, loading } = useApi<MoviesResponse>("/movies");
 
   if (loading) return <div>Loading...</div>;
 

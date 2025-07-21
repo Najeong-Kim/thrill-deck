@@ -1,13 +1,4 @@
-export type Tag = {
-  id: number;
-  name: string;
-};
+import type { components } from "@/types/api";
 
-export type Movie = {
-  id: number;
-  title: string;
-  description: string;
-  rating: number;
-  image: string;
-  tags: Tag[];
-};
+export type MoviesResponse = components["schemas"]["MovieList"];
+export type MovieType = components["schemas"]["MovieSchema"];
