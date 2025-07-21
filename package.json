@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-types": "ts-node scripts/generate-types.ts"
   },
   "dependencies": {
+    "dotenv": "^17.2.0",
     "lucide-react": "^0.477.0",
     "next": "15.2.0",
     "react": "^19.0.0",
@@ -22,8 +24,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.0",
+    "openapi-typescript": "^7.8.0",
     "prettier": "^3.5.2",
     "tailwindcss": "^4.0.9",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
