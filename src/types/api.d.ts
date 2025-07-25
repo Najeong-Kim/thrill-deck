@@ -89,7 +89,10 @@ export interface components {
             vote_count: number | null;
             /** Poster Path */
             poster_path: string | null;
-            /** Created At */
+            /**
+             * Created At
+             * Format: date-time
+             */
             created_at: string;
         };
         /** ValidationError */
