@@ -55,10 +55,70 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/escape-rooms": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Read Escape Rooms */
+        get: operations["read_escape_rooms_escape_rooms_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/escape-rooms/{escape_room_id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Read Escape Room */
+        get: operations["read_escape_room_escape_rooms__escape_room_id__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** EscapeRoomList */
+        EscapeRoomList: {
+            /** Escape Rooms */
+            escape_rooms: components["schemas"]["EscapeRoomSchema"][];
+        };
+        /** EscapeRoomSchema */
+        EscapeRoomSchema: {
+            /** Id */
+            id: number;
+            /** Theme Name */
+            theme_name: string;
+            /** Branch Name */
+            branch_name: string;
+            /** Difficulty */
+            difficulty: number | null;
+            /** Horror Level */
+            horror_level: number | null;
+            /** Location */
+            location: string;
+            /** Poster Image Url */
+            poster_image_url: string | null;
+            /** Play Time */
+            play_time: number | null;
+            /** Synopsis */
+            synopsis: string | null;
+        };
         /** HTTPValidationError */
         HTTPValidationError: {
             /** Detail */
@@ -171,6 +231,57 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["MovieSchema"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    read_escape_rooms_escape_rooms_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EscapeRoomList"];
+                };
+            };
+        };
+    };
+    read_escape_room_escape_rooms__escape_room_id__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                escape_room_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EscapeRoomSchema"];
                 };
             };
             /** @description Validation Error */
