@@ -1,6 +1,6 @@
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
-import { Movies } from "./_components/movie";
+import { MoviesPreview } from "./_components/movie";
 import { EscapeRooms } from "./_components/escape-room";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
             <h2 className="text-3xl font-edo mb-8 text-center neon-text-red">
               <span className="flicker-slow">HORROR</span> MOVIES
             </h2>
-            <Movies />
+            <MoviesPreview />
           </section>
 
           <section>
