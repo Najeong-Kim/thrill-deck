@@ -19,6 +19,7 @@ type Props = {
   size?: PosterSize;
   alt?: string;
   className?: string;
+  fill?: boolean;
 };
 
 export default function PosterImage({
@@ -26,6 +27,7 @@ export default function PosterImage({
   size = "w500",
   alt = "Movie poster",
   className,
+  fill = false,
 }: Props) {
   // poster_path가 null이면 대체 뷰 표시
   if (!posterPath) {
@@ -46,8 +48,9 @@ export default function PosterImage({
     <Image
       src={getPosterUrl(posterPath, size)}
       alt={alt}
-      width={width}
-      height={height}
+      width={fill ? undefined : width}
+      height={fill ? undefined : height}
+      fill={fill}
       placeholder="empty"
       className={className}
     />

@@ -9,6 +9,7 @@ const Movie = ({ title, overview, vote_average, poster_path }: MovieType) => {
         <PosterImage
           posterPath={poster_path}
           className="object-cover transition-all duration-500 group-hover:brightness-[1.1]"
+          fill
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
           <div className="flex items-center gap-1 mb-2">
