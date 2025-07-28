@@ -9,6 +9,21 @@ const nextConfig: NextConfig = {
         hostname: 'image.tmdb.org',
         pathname: '/t/p/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'xdungeon.net',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'zerogangnam.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'naverbooking-phinf.pstatic.net',
+        pathname: '/**',
+      },
     ],
   },
 };

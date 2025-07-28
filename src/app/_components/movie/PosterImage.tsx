@@ -20,6 +20,7 @@ type Props = {
   alt?: string;
   className?: string;
   fill?: boolean;
+  isMoviePoster?: boolean;
 };
 
 export default function PosterImage({
@@ -28,6 +29,7 @@ export default function PosterImage({
   alt = "Movie poster",
   className,
   fill = false,
+  isMoviePoster = false,
 }: Props) {
   // poster_path가 null이면 대체 뷰 표시
   if (!posterPath) {
@@ -44,9 +46,12 @@ export default function PosterImage({
   const width = WIDTH_MAP[size] ?? 500;
   const height = Math.round(width * 1.5); // 2:3 비율
 
+  // 영화 포스터인 경우에만 getPosterUrl 사용, 아니면 posterPath 그대로 사용
+  const imageSrc = isMoviePoster ? getPosterUrl(posterPath, size) : posterPath;
+
   return (
     <Image
-      src={getPosterUrl(posterPath, size)}
+      src={imageSrc}
       alt={alt}
       width={fill ? undefined : width}
       height={fill ? undefined : height}
